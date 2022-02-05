@@ -8,6 +8,7 @@
 build/
 docs/build/
 .ipynb_checkpoints
+hide/
 
 # Tox puts virtualenvs here by default.
 .tox/
