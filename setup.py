@@ -34,8 +34,8 @@ extra_reqs = {
 if __name__ == "__main__":
     setup(
         name='nusa_alphalens',
-        version=versioneer.get_version(),
-        cmdclass=versioneer.get_cmdclass(),
+        version='0.5.0',#versioneer.get_version(),
+        #cmdclass=versioneer.get_cmdclass(),
         description='Performance analysis of predictive (alpha) stock factors',
         author='Quantopian Inc.',
         author_email='opensource@quantopian.com',
@@ -61,4 +61,5 @@ if __name__ == "__main__":
         url='https://github.com/quantopian/alphalens',
         install_requires=install_reqs,
         extras_require=extra_reqs,
+        download_url='https://github.com/Northeastern-Systematic-Alpha/alphalens/archive/refs/tags/v0.5.0.tar.gz'
     )

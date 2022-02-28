@@ -1,13 +1,13 @@
-import pandas as pd
+import duckdb
 import logging
+
+import pandas as pd
 
 from typing import List, Optional, Union
 
-import duckdb
 import pandas_market_calendars as mcal
 
 logging.basicConfig(format='%(message)s ::: %(asctime)s', datefmt='%I:%M:%S %p')
-
 
 #
 # Adjusting pricing data
@@ -81,6 +81,7 @@ def _adjust_field(field: str, table: str) -> str:
 
     return ''
 
+
 #
 # Adjusting data for universe
 #
@@ -140,7 +141,7 @@ class ConstituteAdjustment:
 
         # will throw an error if there are duplicate self.__id_col
         _handle_duplicates(df=index_constitutes, out_type='ValueError', name='The column symbols',
-                          drop=False, subset=[self.__id_col])
+                           drop=False, subset=[self.__id_col])
 
         # seeing if we have to convert from and thru to series of timestamps
         if date_format != '':
@@ -305,6 +306,11 @@ def _check_columns(needed: List[str], df: pd.DataFrame, index_columns: bool = Tr
     return df
 
 
+#
+# utility
+#
+
+
 def _handle_duplicates(df: pd.DataFrame, out_type: str, name: str, drop: bool = False,
                        subset: List[any] = None) -> pd.DataFrame:
     """
@@ -339,10 +345,3 @@ def _handle_duplicates(df: pd.DataFrame, out_type: str, name: str, drop: bool = 
 
     if drop:
         return df
-
-
-if __name__ == '__main__':
-    df = pd.read_csv(
-        '/Users/alex/Desktop/WRDS/CRSP/Annual Update/Stock : Security Files/Daily Stock File/Daily Stock File 29251231-20211231.gz',
-        nrows=1000).drop('cfacshr', axis=1)
-    print(adjust_crsp_data(df))
