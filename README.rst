@@ -28,6 +28,10 @@ and plots about an alpha factor, including:
 Getting started
 ---------------
 
+.. code::
+
+    pip install nusa_alphalens
+
 With a signal and pricing data creating a factor "tear sheet" is a two step process:
 
 .. code:: python
