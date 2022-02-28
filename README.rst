@@ -28,9 +28,6 @@ and plots about an alpha factor, including:
 Getting started
 ---------------
 
-.. code::
-
-    pip install nusa_alphalens
 
 With a signal and pricing data creating a factor "tear sheet" is a two step process:
 
@@ -62,19 +59,8 @@ Install with pip:
 
 ::
 
-    pip install alphalens
+    pip install nusa_alphalens
 
-Install with conda: 
-
-::
-
-    conda install -c conda-forge alphalens
-
-Install from the master branch of Alphalens repository (development code):
-
-::
-
-    pip install git+https://github.com/quantopian/alphalens
 
 Alphalens depends on:
 
