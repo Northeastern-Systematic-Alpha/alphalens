@@ -19,7 +19,7 @@ install_reqs = [
     'IPython>=3.2.3',
     'empyrical>=0.5.0',
     'duckdb>=0.2.0',
-    ''
+    'pandas_market_calendars>=2.0'
 ]
 
 extra_reqs = {
