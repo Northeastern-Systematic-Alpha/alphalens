@@ -12,12 +12,14 @@ if 'upload' in sys.argv:
 install_reqs = [
     'matplotlib>=1.4.0',
     'numpy>=1.9.1',
-    'pandas>=0.18.0',
+    'pandas>=1.0.0',
     'scipy>=0.14.0',
     'seaborn>=0.6.0',
     'statsmodels>=0.6.1',
     'IPython>=3.2.3',
     'empyrical>=0.5.0',
+    'duckdb>=0.2.0',
+    ''
 ]
 
 extra_reqs = {
@@ -31,15 +33,15 @@ extra_reqs = {
 
 if __name__ == "__main__":
     setup(
-        name='alphalens',
+        name='nusa_alphalens',
         version=versioneer.get_version(),
         cmdclass=versioneer.get_cmdclass(),
         description='Performance analysis of predictive (alpha) stock factors',
         author='Quantopian Inc.',
         author_email='opensource@quantopian.com',
-        packages=find_packages(include='alphalens.*'),
+        packages=find_packages(include='nusa_alphalens.*'),
         package_data={
-            'alphalens': ['examples/*'],
+            'nusa_alphalens': ['examples/*'],
         },
         long_description=long_description,
         classifiers=[
@@ -48,9 +50,9 @@ if __name__ == "__main__":
             'License :: OSI Approved :: Apache Software License',
             'Natural Language :: English',
             'Operating System :: OS Independent',
-            'Programming Language :: Python :: 2.7',
-            'Programming Language :: Python :: 3.4',
-            'Programming Language :: Python :: 3.5',
+            'Programming Language :: Python :: 3.7',
+            'Programming Language :: Python :: 3.8',
+            'Programming Language :: Python :: 3.9',
             'Programming Language :: Python',
             'Topic :: Utilities',
             'Topic :: Office/Business :: Financial',

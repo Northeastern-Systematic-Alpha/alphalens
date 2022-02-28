@@ -50,7 +50,7 @@ def customize(func):
 
 def plotting_context(context='notebook', font_scale=1.5, rc=None):
     """
-    Create alphalens default plotting style context.
+    Create nusa_alphalens default plotting style context.
 
     Under the hood, calls and returns seaborn.plotting_context() with
     some custom settings. Usually you would use in a with-context.
@@ -73,8 +73,8 @@ def plotting_context(context='notebook', font_scale=1.5, rc=None):
 
     Example
     -------
-    with alphalens.plotting.plotting_context(font_scale=2):
-        alphalens.create_full_tear_sheet(..., set_context=False)
+    with nusa_alphalens.plotting.plotting_context(font_scale=2):
+        nusa_alphalens.create_full_tear_sheet(..., set_context=False)
 
     See also
     --------
@@ -93,7 +93,7 @@ def plotting_context(context='notebook', font_scale=1.5, rc=None):
 
 
 def axes_style(style='darkgrid', rc=None):
-    """Create alphalens default axes style context.
+    """Create nusa_alphalens default axes style context.
 
     Under the hood, calls and returns seaborn.axes_style() with
     some custom settings. Usually you would use in a with-context.
@@ -111,8 +111,8 @@ def axes_style(style='darkgrid', rc=None):
 
     Example
     -------
-    with alphalens.plotting.axes_style(style='whitegrid'):
-        alphalens.create_full_tear_sheet(..., set_context=False)
+    with nusa_alphalens.plotting.axes_style(style='whitegrid'):
+        nusa_alphalens.create_full_tear_sheet(..., set_context=False)
 
     See also
     --------

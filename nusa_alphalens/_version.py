@@ -42,8 +42,8 @@ def get_config():
     cfg.VCS = "git"
     cfg.style = "pep440"
     cfg.tag_prefix = "v"
-    cfg.parentdir_prefix = "alphalens-"
-    cfg.versionfile_source = "alphalens/_version.py"
+    cfg.parentdir_prefix = "nusa_alphalens-"
+    cfg.versionfile_source = "nusa_alphalens/_version.py"
     cfg.verbose = False
     return cfg
 
